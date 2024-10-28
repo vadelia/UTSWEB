@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Aplikasi</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script>
+        function redirectToDashboard(event) {
+            event.preventDefault(); // Mencegah form untuk submit
+            // Dapatkan username dan password jika perlu
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            window.location.href = 'dashboard.html'; // Ganti dengan halaman dashboard Anda
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <section class="login-box">
+        <h2>Halaman Login RR Beauty</h2>
+        <form onsubmit="redirectToDashboard(event)">
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="submit" class="back-button" style="border-radius: 5px; width: 400px;">Login</button> 
+        </form>
+        <p style="text-align: center;"> 
+            <a href="home_page.html">Back</a> | <a href="register_page.html">Register</a>
+        </p>
+    </section>   
+</div>
+</body>
+</html>
